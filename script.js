@@ -11,7 +11,7 @@ $(document).ready(function(){
     $("#result").empty();
     var plotSize = parseFloat($("#plot-size").val())*1024*1024;
     var maxRam = parseFloat($("#max-ram").val())*1024*1024;
-    var diskSpace = parseFloat($("#disk-space").val())*1024*1024;
+    var diskSpace = Math.floor(parseFloat($("#disk-space").val())/1024);
     var startNounce = parseInt($("#start-nounce").val());
     var plotsPath = $("#plots-path").val();
     var walletId = parseInt($("#wallet-id").val());
@@ -46,7 +46,7 @@ $(document).ready(function(){
     $("#result").append("------------------------\n");
     
     var curStart = startNounce;
-    for (var i = 1; i < fileCount; i++) {
+    for (var i = 1; i <= fileCount; i++) {
       var cmd = "gpuPlotGenerator generate buffer "+plotsPath+walletId+"_"+curStart+"_"+plotNounces+"_"+treeNounces+"\n";
       $("#result").append(cmd);
       curStart += plotNounces;
