@@ -14,7 +14,7 @@ $(document).ready(function(){
     var diskSpace = Math.floor(parseFloat($("#disk-space").val())/1024);
     var startNounce = parseInt($("#start-nounce").val());
     var plotsPath = $("#plots-path").val();
-    var walletId = parseInt($("#wallet-id").val());
+    var walletId = $("#wallet-id").val();
 
     $("#result").append("plotSize = "+plotSize+" KB\n");
     $("#result").append("maxRam = "+maxRam+" KB\n");
