@@ -1,0 +1,84 @@
+<html>
+<head>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">  
+  <script src="bootstrap/js/jquery-3.2.1.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    
+    <h2>GPU Plot Calc by Kuznetz</h2>
+    
+    <form id="config-form" class="form-horizontal">
+      <fieldset>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">One Plot Size (GB)</label>  
+        <div class="col-md-4">
+          <input value="1024" id="plot-size" type="text" placeholder="" class="form-control input-md">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Free Ram (GB)</label>  
+        <div class="col-md-4">
+          <input value="8" id="max-ram" type="text" placeholder="" class="form-control input-md">
+          <div>Free Ram - without system needs and gpu buffer</div>
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Free Disk Space (GB)</label>  
+        <div class="col-md-4">
+          <input value="7450" id="disk-space" type="text" placeholder="" class="form-control input-md">
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Start Nounce</label>  
+        <div class="col-md-4">
+          <input value="1" id="start-nounce" type="text" placeholder="" class="form-control input-md">
+        </div>
+      </div>
+      
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Plots Path</label>  
+        <div class="col-md-4">
+          <input value="C:\plots\" id="plots-path" type="text" placeholder="" class="form-control input-md">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Wallet Numeric ID</label>  
+        <div class="col-md-4">
+          <input value="12345" id="wallet-id" type="text" placeholder="" class="form-control input-md">
+        </div>
+      </div>      
+
+      <!-- Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label"></label>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary">Calculate</button>
+        </div>
+      </div>
+
+      </fieldset>
+    </form>
+  
+    <div>
+      <h2>Result</h2>
+      <textarea id="result" class="form-control" style="height: 400px"></textarea>
+    </div>
+    
+  </div>
+</body>
+</html>
