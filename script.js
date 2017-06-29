@@ -38,7 +38,9 @@ $(document).ready(function(){
     var lastPlotNounces = Math.floor(lastDiskSpace / 256);
     var lastTreeNounces = 0;
     if (lastPlotNounces > 0) {
-      lastTreeNounces = calcTreeNounces(lastPlotNounces,ramNounces);
+      //lastTreeNounces = calcTreeNounces(lastPlotNounces,ramNounces);
+      lastTreeNounces = treeNounces;
+      lastPlotNounces = Math.floor(lastPlotNounces/treeNounces)*treeNounces;
     }
     $("#result").append("lastPlotNounces = "+plotNounces+"\n");
     $("#result").append("lastTreeNounces = "+lastTreeNounces+"\n");    
